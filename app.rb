@@ -7,9 +7,9 @@ class App < Sinatra::Base
 
   end
 
-  post "/pigLatinizer" do
+  post "/piglatinize" do
     @pigLatinizer = PigLatinizer.new
-    erb :pigLatinizer
+    erb :piglatinize
   end
 
 
