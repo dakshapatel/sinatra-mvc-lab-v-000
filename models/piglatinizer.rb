@@ -1,7 +1,7 @@
 class PigLatinizer
 
 
-  def piglatinize (str)
+  def piglatinize (word)
   str1="aeiou"
   str2=(/\A[aeiou]/)
   vowel = str1.scan(/\w/)
@@ -25,6 +25,12 @@ class PigLatinizer
     str + s + "ay"
   end
 end
+
+def to_pig_latin(text)
+  words = text.split(" ")
+  words.maps!{|word| piglatinize(word)}
+  words.join(" ")
+end 
 
 
 end
