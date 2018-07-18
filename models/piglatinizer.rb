@@ -1,7 +1,7 @@
 class PigLatinizer
 
 
-  def translate (str)
+  def piglatinize (str)
   str1="aeiou"
   str2=(/\A[aeiou]/)
   vowel = str1.scan(/\w/)
