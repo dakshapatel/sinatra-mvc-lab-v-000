@@ -1,5 +1,5 @@
 require_relative 'config/environment'
-
+reuire'pry'
 class App < Sinatra::Base
 
   get "/" do
@@ -7,6 +7,7 @@ class App < Sinatra::Base
   end
 
   post "/piglatinize" do
+    binding.pry
     @text = params[:user_input]
     @piglatinizer = PigLatinizer.new
     @piglatinizer
