@@ -1,8 +1,5 @@
 class PigLatinizer
 
-  def initialize(str)
-    @str = str.downcase
-  end
 
   def translate (str)
   str1="aeiou"
