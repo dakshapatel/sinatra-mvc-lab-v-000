@@ -2,35 +2,23 @@ class PigLatinizer
 
 
   def piglatinize (word)
-  str1="aeiou"
-  str2=(/\A[aeiou]/)
-  vowel = str1.scan(/\w/)
-  alpha =('a'..'z').to_a
-  con = (alpha - vowel).join
-  word = str.scan(/\w/)
-  if  #first rule
-    str =~ str2
-    str + "ay"
-  elsif # second rule
-    str != str2
-    s = str.slice!(/^./)
-    str + s + "ay"
-  elsif
-    word[0.1]=~(/\A[con]/)
-    s = str.slice!(/^../)
-    str + s + "ay"
-  else
-    word[0..2]=~(/\A[con]/)
-    s = str.slice!(/^.../)
-    str + s + "ay"
+  return word if %w[and an in].include?(word)
+  letters = word.split("")
+  letters.keep_if {|letter| letter != "."}
+  if letters.size > 1
+    until vowel>(letters[0])
+      letters << letters.shift
+    end
+    letters << "ay"
   end
-end
+  letters.join
+  end
 
-def to_pig_latin(text)
-  words = text.split(" ")
-  words.maps!{|word| piglatinize(word)}
-  words.join(" ")
-end 
+  def to_pig_latin(text)
+    words = text.split(" ")
+    words.maps!{|word| piglatinize(word)}
+    words.join(" ")
+  end
 
 
 end
