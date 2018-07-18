@@ -1,17 +1,14 @@
 class PigLatinizer
 
 
-  def piglatinize (word)
-  return word if %w[and an in].include?(word)
-  letters = word.split("")
-  letters.keep_if {|letter| letter != "."}
-  if letters.size > 1
-    until vowel > (letters[0])
-      letters << letters.shift
-    end
-    letters << "ay"
-  end
-  letters.join
+  
+    
+  def translate(word)
+      if word[0] == "a" || "e" || "o" || "u" || "i"
+          word = word + "ay"
+      elsif word[0] != "a" || "e" || "o" || "u" || "i"
+          word = word-word[0]+"ay"
+      end
   end
 
   def to_pig_latin(text)
