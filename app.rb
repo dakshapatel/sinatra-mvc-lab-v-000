@@ -7,6 +7,9 @@ class App < Sinatra::Base
 
   end
 
+  post "/pig_latin_words" do
+    @pigLatinizer = PigLatinizer.new(params[:])
+  end
 
 
 
