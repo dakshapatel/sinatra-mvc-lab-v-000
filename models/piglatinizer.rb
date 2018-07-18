@@ -1,14 +1,14 @@
 class PigLatinizer
 
 
-  
-    
+
+
   def translate(word)
-      if word[0] == "a" || "e" || "o" || "u" || "i"
-          word = word + "ay"
-      elsif word[0] != "a" || "e" || "o" || "u" || "i"
-          word = word-word[0]+"ay"
-      end
+    if word[0] == "a" || "e" || "o" || "u" || "i"
+        word = word + "ay"
+    elsif word[0] != "a" || "e" || "o" || "u" || "i"
+        word = word-word[0]+"ay"
+    end
   end
 
   def to_pig_latin(text)
