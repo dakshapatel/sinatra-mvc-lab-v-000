@@ -1,8 +1,5 @@
 class PigLatinizer
 
-  def initialize(word)
-        @word = word.to_s
-    end
 
   def translate(word)
     if word[0] == "a" || "e" || "o" || "u" || "i"
