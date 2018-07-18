@@ -17,10 +17,7 @@ class PigLatinizer
     words.join(" ")
   end
 
-  # def vowel?(letter)
-  #   letter.downcase
-  #   letter == "o" || letter == "e" || letter == "a" || letter == "i" || letter == "u"
-  # end
+  
 
 
 end
